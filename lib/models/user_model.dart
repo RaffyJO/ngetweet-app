@@ -9,6 +9,7 @@ class User {
   String email;
   String? avatar;
   DateTime? emailVerifiedAt;
+  String? createdAt;
   String password;
   String? token;
   List<Tweet>? tweets;
@@ -22,6 +23,7 @@ class User {
     required this.email,
     this.avatar,
     this.emailVerifiedAt,
+    this.createdAt,
     required this.password,
     this.token,
     this.tweets,
@@ -36,6 +38,7 @@ class User {
         email: json['data']['email'],
         avatar: json['data']['avatar'],
         emailVerifiedAt: DateTime.parse(json['data']['email_verified_at']),
+        createdAt: (json['data']['created_at']),
         password: json['data']['password'],
         token: json['token'],
         tweets: json['data']['tweets'],
@@ -60,6 +63,7 @@ class User {
     String? password,
     String? token,
     DateTime? emailVerifiedAt,
+    String? createdAt,
     List<Tweet>? tweets,
     List<Comment>? comments,
     List<Like>? likes,
@@ -71,6 +75,7 @@ class User {
       email: email ?? this.email,
       avatar: avatar,
       emailVerifiedAt: emailVerifiedAt ?? this.emailVerifiedAt,
+      createdAt: createdAt ?? this.createdAt,
       password: password ?? this.password,
       token: token ?? this.token,
       tweets: tweets ?? this.tweets,

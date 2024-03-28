@@ -23,7 +23,7 @@ class RegisterModel {
     };
   }
 
-  RegisterModel copyWith({String? avatar, String? ktp}) => RegisterModel(
+  RegisterModel copyWith({String? avatar}) => RegisterModel(
         name: name,
         nickname: nickname,
         email: email,

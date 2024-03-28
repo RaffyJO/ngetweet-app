@@ -6,10 +6,10 @@ Color blackColor = const Color(0xff141619);
 Color whiteColor = const Color(0xffFFFFFF);
 Color greyColor = const Color(0xff687684);
 
-TextStyle blueTextStyle = GoogleFonts.poppins(color: blueColor);
-TextStyle blackTextStyle = GoogleFonts.poppins(color: blackColor);
-TextStyle whiteTextStyle = GoogleFonts.poppins(color: whiteColor);
-TextStyle greyTextStyle = GoogleFonts.poppins(color: greyColor);
+TextStyle blueTextStyle = GoogleFonts.roboto(color: blueColor);
+TextStyle blackTextStyle = GoogleFonts.roboto(color: blackColor);
+TextStyle whiteTextStyle = GoogleFonts.roboto(color: whiteColor);
+TextStyle greyTextStyle = GoogleFonts.roboto(color: greyColor);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
