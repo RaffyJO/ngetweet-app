@@ -18,3 +18,9 @@ FontWeight semiBold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
 FontWeight extraBold = FontWeight.w800;
 FontWeight black = FontWeight.w900;
+
+final kTweetStyle = TextStyle(
+  fontSize: 16.0,
+  letterSpacing: -0.3,
+  color: blackColor,
+);

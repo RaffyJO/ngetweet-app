@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ngetweet/blocs/auth/auth_bloc.dart';
+import 'package:ngetweet/blocs/tweet/tweet_bloc.dart';
 import 'package:ngetweet/shared/theme.dart';
 import 'package:ngetweet/views/pages/home/home_page.dart';
 import 'package:ngetweet/views/pages/login/login_page.dart';
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => AuthBloc()..add(AuthGetCurrentUser()),
+        ),
+        BlocProvider(
+          create: (context) => TweetBloc()..add(TwettGetAll()),
         ),
       ],
       child: MaterialApp(

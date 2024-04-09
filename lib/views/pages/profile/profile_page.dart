@@ -62,14 +62,21 @@ class ProfilePage extends StatelessWidget {
                                   child: Container(
                                     height: 68,
                                     width: 68,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          'assets/img-profile.jpg',
-                                        ),
-                                        fit: BoxFit.cover,
-                                      ),
+                                      image: (state.user.avatar == '')
+                                          ? const DecorationImage(
+                                              image: AssetImage(
+                                                'assets/img-profile-default.jpg',
+                                              ),
+                                              fit: BoxFit.cover,
+                                            )
+                                          : DecorationImage(
+                                              image: NetworkImage(
+                                                state.user.avatar.toString(),
+                                              ),
+                                              fit: BoxFit.cover,
+                                            ),
                                     ),
                                   ),
                                 ),
@@ -130,24 +137,6 @@ class ProfilePage extends StatelessWidget {
                           verticalSpace(6),
                           Row(
                             children: [
-                              Row(
-                                children: [
-                                  const Icon(
-                                    Icons.link,
-                                    size: 15,
-                                  ),
-                                  horizontalSpace(4),
-                                  Text(
-                                    'pixsellz.io',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: regular,
-                                      color: blueColor,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              horizontalSpace(12),
                               Row(
                                 children: [
                                   const Icon(
